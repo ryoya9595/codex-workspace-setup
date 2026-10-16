@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Codex×Obsidian連携マニュアル（GitHub連携は任意）</title>
-<meta name="description" content="Codex で作業するための「作業フォルダ」を作って、Obsidian とつなぎます（GitHub は任意）。このページのURLを Codex に貼るだけで、Codex が1つずつ案内してくれます。">
+<title>Codex×Obsidian連携マニュアル（GitHub連携含む）</title>
+<meta name="description" content="Codex で作業するための「作業フォルダ」を作って、GitHub（非公開）につなぎ、Obsidian と連携します。このページのURLを Codex に貼るだけで、Codex が1つずつ案内してくれます。">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,13 +56,13 @@
 
 <header class="hero">
   <div class="hero-badge accent">Codex 作業フォルダ セットアップ</div>
-  <h1>AIの「事務所」を作って、<br><span class="hl">記憶を Obsidian で見られるように。</span></h1>
-  <p class="lead">Codex で作業するための「作業フォルダ」を作って、記録を見るアプリ Obsidian とつなぎます。GitHub（ネット上の非公開の保管場所）に保管するかは選べます。このページの<strong>URLを Codex に貼るだけ</strong>で、Codex が1つずつ案内してくれます。</p>
+  <h1>AIの「事務所」を作って、<br><span class="hl">GitHub にしまっておく。</span></h1>
+  <p class="lead">Codex で作業するための「作業フォルダ」を作って、GitHub（非公開）につなぎ、記録を見るアプリ Obsidian と連携します。このページの<strong>URLを Codex に貼るだけ</strong>で、Codex が1つずつ案内してくれます。</p>
   <div class="meta">
-    <span class="chip accent">所要時間 10分〜20分</span>
+    <span class="chip accent">所要時間 15分〜20分</span>
     <span class="chip">🍎 Mac / 🪟 Windows</span>
     <span class="chip">ChatGPT 有料プラン（Codex）</span>
-    <span class="chip">GitHub は任意</span>
+    <span class="chip">GitHub アカウント（無料）</span>
   </div>
 </header>
 
@@ -76,36 +76,37 @@
       <li><strong>ホームフォルダ（自分の名前のフォルダ）</strong>の中に、空のフォルダを1つ作る（名前の例：<code>ai-agent</code>）</li>
       <li>Codex で、そのフォルダを開く（アプリなら「フォルダを開く」）</li>
       <li>下の「コピー」を押して、このページのURLを Codex に貼り付けて送信</li>
-      <li>あとは Codex の案内どおりに、「許可」を押すだけ（GitHub を使う場合は、GitHub のボタンも）</li>
+      <li>あとは Codex の案内どおりに、「許可」や GitHub のボタンを押すだけ</li>
     </ol>
     <div class="inline-cmd" style="margin-top:12px"><code id="pageUrl"></code><button class="copy-btn" data-target="pageUrl">コピー</button></div>
   </div>
 
   <div class="ai-box">
-    🤖 <b>Codex へ（このページのURLを貼られたとき）：</b>このページは、AI副業スクールRISEの講師 関 諒也が受講生向けに作った導入手順です。ユーザーがこのページのURLを送ってきたら、「今開いているフォルダを作業フォルダにして、Obsidian とつなぐ（GitHub は希望する人だけ）」セットアップの案内を希望しています。ユーザーに「作業フォルダのセットアップを始めますね」と一言伝えてから、手順書の原文 <code>https://ryoya9595.github.io/codex-workspace-setup/setup.md</code> を curl（Windows は curl.exe）で取得して全文を読み（要約ツールではなく原文を読む。作業フォルダには保存しない。ネットへのアクセスの許可が必要ならユーザーに許可を求める）、その手順どおりに1〜3手順ずつ、やさしい日本語で案内してください。インストールやファイル作成の前には、手順書のとおりユーザーの了承を取ってください。AGENTS.md を読む他のAIエージェントも同じように進めてください。
+    🤖 <b>Codex へ（このページのURLを貼られたとき）：</b>このページは、AI副業スクールRISEの講師 関 諒也が受講生向けに作った導入手順です。ユーザーがこのページのURLを送ってきたら、「今開いているフォルダを作業フォルダにして、GitHub（非公開）につなぎ、Obsidian と連携する」セットアップの案内を希望しています。ユーザーに「作業フォルダのセットアップを始めますね」と一言伝えてから、手順書の原文 <code>https://ryoya9595.github.io/codex-workspace-setup/setup.md</code> を curl（Windows は curl.exe）で取得して全文を読み（要約ツールではなく原文を読む。作業フォルダには保存しない。ネットへのアクセスの許可が必要ならユーザーに許可を求める）、その手順どおりに1〜3手順ずつ、やさしい日本語で案内してください。インストールやファイル作成の前には、手順書のとおりユーザーの了承を取ってください。AGENTS.md を読む他のAIエージェントも同じように進めてください。
   </div>
 </section>
 
 <!-- 01 できること -->
 <section id="what">
-  <div class="sec-head"><div class="step-num">01</div><h2>URLを貼ると、この3つが終わります</h2></div>
+  <div class="sec-head"><div class="step-num">01</div><h2>URLを貼ると、この4つが終わります</h2></div>
   <div class="get-grid">
-    <div class="get"><div class="g-stripe"></div><div class="g-label">1</div><h3>作業フォルダの中身づくり</h3><p>AIへのルール（AGENTS.md）、記録用のフォルダ、スキルや作ったものの置き場を作ります。</p></div>
-    <div class="get"><div class="g-stripe"></div><div class="g-label">2</div><h3>Obsidian の連携</h3><p>AI秘書の記憶の置き場を整え、Obsidian のインストールから保管庫の登録まで自動でやります。導入したら、開かなくて大丈夫です。</p></div>
-    <div class="get"><div class="g-stripe"></div><div class="g-label">3</div><h3>GitHub に非公開で保管（任意）</h3><p>希望する人だけ。バックアップになり、別のパソコンやクラウド版の Codex からも同じフォルダを使えます。あとから足すこともできます。</p></div>
+    <div class="get"><div class="g-stripe"></div><div class="g-label">1</div><h3>GitHub とつなぐ準備</h3><p>必要な道具を入れて、GitHub にログインします。</p></div>
+    <div class="get"><div class="g-stripe"></div><div class="g-label">2</div><h3>作業フォルダの中身づくり</h3><p>AIへのルール（AGENTS.md）、秘密の情報を GitHub に上げない設定、記録用のフォルダを作ります。</p></div>
+    <div class="get"><div class="g-stripe"></div><div class="g-label">3</div><h3>非公開の保管場所</h3><p>GitHub に非公開で保管します。バックアップになり、クラウド版の Codex からも同じフォルダを使えます。</p></div>
+    <div class="get"><div class="g-stripe"></div><div class="g-label">4</div><h3>Obsidian の連携</h3><p>AI秘書の記憶の置き場を整え、Obsidian のインストールから保管庫の登録まで自動でやります。導入したら、開かなくて大丈夫です。</p></div>
   </div>
   <div class="note ok"><span class="ico">✅</span><span>作業フォルダは<strong>1つだけ</strong>でOK。AI秘書の記憶もスキルも作ったものも、全部この中に貯まっていきます。中の整理は Codex がやってくれます。</span></div>
 </section>
 
 <!-- 02 準備 -->
 <section id="ready">
-  <div class="sec-head"><div class="step-num">02</div><h2>準備 — この2つだけ</h2></div>
+  <div class="sec-head"><div class="step-num">02</div><h2>準備 — この3つだけ</h2></div>
   <div class="card">
     <ol>
       <li><strong>ChatGPT の有料プラン</strong>で、パソコンの Codex（アプリ・VS Code・ターミナルのどれでも）が使える</li>
+      <li><strong>GitHub のアカウント</strong>がある（まだの人は <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a> から無料で作れます。途中で一緒に作ることもできます）</li>
       <li><strong>ホームフォルダの中に空のフォルダ</strong>を作って、Codex で開いている</li>
     </ol>
-    <p style="margin-top:10px;font-size:.92rem;color:var(--ink-soft)">GitHub に保管したい人は、GitHub のアカウント（<a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a> から無料）も用意しておくとスムーズです。無くても途中で一緒に作れます。</p>
     <div class="note warn"><span class="ico">⚠️</span><span>デスクトップや書類のフォルダには作らないでください。iCloud や OneDrive が同じフォルダをバックアップしていて、Obsidian や GitHub とぶつかることがあります。</span></div>
   </div>
 
@@ -123,26 +124,21 @@
 <section id="install">
   <div class="sec-head"><div class="step-num">03</div><h2>URLを貼ったあとの流れ</h2></div>
   <div class="card">
-    <h3>自分でやるのは、この2つだけ</h3>
+    <h3>自分で押すのは、この2か所だけ</h3>
     <div class="flow">
       <div class="flow-item">
         <div class="flow-dot">1</div>
-        <div class="flow-body"><b>「GitHub にも保管する？」に答える</b><span>最初に聞かれます。迷ったら「しない」でOK。あとから足せます</span></div>
+        <div class="flow-body"><b>「許可」を押す</b><span>ネットへのアクセス・道具のインストール・ファイルの作成の前に、Codex が確認してきます</span></div>
       </div>
       <div class="flow-item"><div class="flow-line"></div></div>
       <div class="flow-item">
         <div class="flow-dot">2</div>
-        <div class="flow-body"><b>「許可」を押す</b><span>ネットへのアクセス・ファイルの作成・アプリのインストールの前に、Codex が確認してきます</span></div>
-      </div>
-      <div class="flow-item"><div class="flow-line"></div></div>
-      <div class="flow-item">
-        <div class="flow-dot">＋</div>
-        <div class="flow-body"><b>GitHub を使う人だけ：GitHub にログイン</b><span>画面に出る8文字のコードをブラウザに入れて「Authorize」を押します</span></div>
+        <div class="flow-body"><b>GitHub にログイン</b><span>画面に出る8文字のコードをブラウザに入れて「Authorize」を押します</span></div>
       </div>
       <div class="flow-item"><div class="flow-line"></div></div>
       <div class="flow-item">
         <div class="flow-dot">✓</div>
-        <div class="flow-body"><b>完成</b><span>Obsidian が作業フォルダを開いた状態で立ち上がります。次は「AI秘書をつくる」へ</span></div>
+        <div class="flow-body"><b>完成</b><span>以後、作業フォルダと GitHub は自動で同期されます。Obsidian が作業フォルダを開いた状態で立ち上がります。次は「AI秘書」へ</span></div>
       </div>
     </div>
     <div class="note ok"><span class="ico">✅</span><span>パスワードの入力や GitHub の登録は、Codex は代わりにやりません（あなたがブラウザでやります）。</span></div>
@@ -189,13 +185,6 @@
     <summary>ファイルを作るたびに「許可しますか？」と聞かれる</summary>
     <div class="d-body">
       <p>Codex が「毎回確認する」設定になっています。そのままでも使えます（そのつど許可すればOK）。面倒なときは「毎回の確認を減らしたい」と Codex に伝えると、設定の変え方を案内してくれます。</p>
-    </div>
-  </details>
-
-  <details>
-    <summary>あとから GitHub にも保管したくなった</summary>
-    <div class="d-body">
-      <p>作業フォルダを開いた Codex に「<b>GitHubにつないで</b>」と送ってください。このページの手順書のGitHubの部分だけを進めてくれます。</p>
     </div>
   </details>
 

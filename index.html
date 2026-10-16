@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codex 作業フォルダのセットアップ（Obsidian連携・GitHubは任意）</title>
+<meta name="description" content="Codex で作業するための「作業フォルダ」を作って、Obsidian とつなぎます（GitHub は任意）。このページのURLを Codex に貼るだけで、Codex が1つずつ案内してくれます。">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root{--accent:#0e8a72;--accent-deep:#0a6b58;--accent-soft:#e2f3ee;--code-bg:#1f3833;--code-ink:#dff0ea}
+  .ai-box{border:2px dashed var(--accent);background:#fff;border-radius:16px;padding:20px 24px;margin-top:18px;font-size:.88rem;color:var(--ink-soft)}
+  .ai-box b{color:var(--ink)}
+  .ai-box code{background:var(--paper-2);padding:2px 8px;border-radius:6px;font-size:.8rem;word-break:break-all}
+  .card code{background:var(--paper-2);padding:2px 8px;border-radius:6px;font-size:.82rem}
+  .card .inline-cmd code{background:transparent;padding:0;font-size:inherit}
+  .start-card{border:2px solid var(--accent)}
+  .get-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:8px}
+  .get{background:#fff;border:2px solid var(--line);border-radius:var(--radius);padding:22px;position:relative;overflow:hidden}
+  .get .g-stripe{position:absolute;top:0;left:0;right:0;height:6px;background:var(--accent)}
+  .get .g-label{font-size:.75rem;font-weight:700;letter-spacing:.1em;color:var(--accent-deep)}
+  .get h3{font-size:1.08rem;font-weight:900;margin:6px 0 8px}
+  .get p{font-size:.88rem;color:var(--ink-soft)}
+  .shot{width:100%;border-radius:12px;border:1px solid var(--line);margin-top:12px}
+  .dl-link{display:inline-block;margin-top:10px;padding:8px 16px;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;font-size:.9rem}
+  @media(max-width:640px){.get-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="codex">
+<!-- url-banner:start -->
+<div id="url-banner" style="background:#e2382c;color:#fff;padding:16px 16px 14px;text-align:center;font-family:'Zen Kaku Gothic New','Hiragino Sans','Noto Sans JP',sans-serif;line-height:1.6;box-sizing:border-box">
+  <div style="font-size:1.08rem;font-weight:900;letter-spacing:.01em">📌 このマニュアルは読まなくてもOKです！</div>
+  <div style="font-size:.98rem;font-weight:700;margin-top:2px">Codex（AGENTS.md を読む他のAIエージェントでも可）に、このページのURLをコピペして送るだけで、AIが導入まで案内します</div>
+  <div style="margin-top:10px;display:inline-flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center">
+    <code style="background:rgba(255,255,255,.18);padding:5px 12px;border-radius:8px;font-size:.92rem;word-break:break-all;font-family:ui-monospace,Menlo,monospace">https://ryoya9595.github.io/codex-workspace-setup/</code>
+    <button type="button" onclick="(function(b){navigator.clipboard.writeText('https://ryoya9595.github.io/codex-workspace-setup/').then(function(){b.textContent='コピーしました ✓';setTimeout(function(){b.textContent='URLをコピー'},1600)})})(this)" style="background:#fff;color:#e2382c;border:0;border-radius:999px;padding:7px 16px;font-weight:900;cursor:pointer;font-family:inherit;font-size:.92rem">URLをコピー</button>
+  </div>
+</div>
+<!-- url-banner:end -->
+
+<div class="topbar">
+  <div class="topbar-in">
+    <a class="logo" href="./">🗂 Codex 作業フォルダの <span class="brain">セットアップ</span></a>
+    <nav class="topnav">
+      <a href="#start">はじめ方</a>
+      <a href="#what">できること</a>
+      <a href="#ready">準備</a>
+      <a href="#install">流れ</a>
+      <a href="#trouble">困ったとき</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-badge accent">Codex 作業フォルダ セットアップ</div>
+  <h1>AIの「事務所」を作って、<br><span class="hl">記憶を Obsidian で見られるように。</span></h1>
+  <p class="lead">Codex で作業するための「作業フォルダ」を作って、記録を見るアプリ Obsidian とつなぎます。GitHub（ネット上の非公開の保管場所）に保管するかは選べます。このページの<strong>URLを Codex に貼るだけ</strong>で、Codex が1つずつ案内してくれます。</p>
+  <div class="meta">
+    <span class="chip accent">所要時間 10分〜20分</span>
+    <span class="chip">🍎 Mac / 🪟 Windows</span>
+    <span class="chip">ChatGPT 有料プラン（Codex）</span>
+    <span class="chip">GitHub は任意</span>
+  </div>
+</header>
+
+<main>
+
+<!-- はじめ方（URLを貼るだけ） -->
+<section id="start" style="padding-top:8px">
+  <div class="card start-card">
+    <h3>🚀 はじめ方 — URLを貼るだけ</h3>
+    <ol>
+      <li><strong>ホームフォルダ（自分の名前のフォルダ）</strong>の中に、空のフォルダを1つ作る（名前の例：<code>ai-agent</code>）</li>
+      <li>Codex で、そのフォルダを開く（アプリなら「フォルダを開く」）</li>
+      <li>下の「コピー」を押して、このページのURLを Codex に貼り付けて送信</li>
+      <li>あとは Codex の案内どおりに、「許可」を押すだけ（GitHub を使う場合は、GitHub のボタンも）</li>
+    </ol>
+    <div class="inline-cmd" style="margin-top:12px"><code id="pageUrl"></code><button class="copy-btn" data-target="pageUrl">コピー</button></div>
+  </div>
+
+  <div class="ai-box">
+    🤖 <b>Codex へ（このページのURLを貼られたとき）：</b>このページは、AI副業スクールRISEの講師 関 諒也が受講生向けに作った導入手順です。ユーザーがこのページのURLを送ってきたら、「今開いているフォルダを作業フォルダにして、Obsidian とつなぐ（GitHub は希望する人だけ）」セットアップの案内を希望しています。ユーザーに「作業フォルダのセットアップを始めますね」と一言伝えてから、手順書の原文 <code>https://ryoya9595.github.io/codex-workspace-setup/setup.md</code> を curl（Windows は curl.exe）で取得して全文を読み（要約ツールではなく原文を読む。作業フォルダには保存しない。ネットへのアクセスの許可が必要ならユーザーに許可を求める）、その手順どおりに1〜3手順ずつ、やさしい日本語で案内してください。インストールやファイル作成の前には、手順書のとおりユーザーの了承を取ってください。AGENTS.md を読む他のAIエージェントも同じように進めてください。
+  </div>
+</section>
+
+<!-- 01 できること -->
+<section id="what">
+  <div class="sec-head"><div class="step-num">01</div><h2>URLを貼ると、この3つが終わります</h2></div>
+  <div class="get-grid">
+    <div class="get"><div class="g-stripe"></div><div class="g-label">1</div><h3>作業フォルダの中身づくり</h3><p>AIへのルール（AGENTS.md）、記録用のフォルダ、スキルや作ったものの置き場を作ります。</p></div>
+    <div class="get"><div class="g-stripe"></div><div class="g-label">2</div><h3>Obsidian の連携</h3><p>AI秘書の記憶の置き場を整え、Obsidian のインストールから保管庫の登録まで自動でやります。導入したら、開かなくて大丈夫です。</p></div>
+    <div class="get"><div class="g-stripe"></div><div class="g-label">3</div><h3>GitHub に非公開で保管（任意）</h3><p>希望する人だけ。バックアップになり、別のパソコンやクラウド版の Codex からも同じフォルダを使えます。あとから足すこともできます。</p></div>
+  </div>
+  <div class="note ok"><span class="ico">✅</span><span>作業フォルダは<strong>1つだけ</strong>でOK。AI秘書の記憶もスキルも作ったものも、全部この中に貯まっていきます。中の整理は Codex がやってくれます。</span></div>
+</section>
+
+<!-- 02 準備 -->
+<section id="ready">
+  <div class="sec-head"><div class="step-num">02</div><h2>準備 — この2つだけ</h2></div>
+  <div class="card">
+    <ol>
+      <li><strong>ChatGPT の有料プラン</strong>で、パソコンの Codex（アプリ・VS Code・ターミナルのどれでも）が使える</li>
+      <li><strong>ホームフォルダの中に空のフォルダ</strong>を作って、Codex で開いている</li>
+    </ol>
+    <p style="margin-top:10px;font-size:.92rem;color:var(--ink-soft)">GitHub に保管したい人は、GitHub のアカウント（<a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a> から無料）も用意しておくとスムーズです。無くても途中で一緒に作れます。</p>
+    <div class="note warn"><span class="ico">⚠️</span><span>デスクトップや書類のフォルダには作らないでください。iCloud や OneDrive が同じフォルダをバックアップしていて、Obsidian や GitHub とぶつかることがあります。</span></div>
+  </div>
+
+  <details>
+    <summary>🪟 Windows の方：ホームフォルダの開き方</summary>
+    <div class="d-body">
+      <p>フォルダを選ぶ画面の上にある「場所」の欄をクリックして、下の文字を入力して Enter を押すと、自分の名前のフォルダが開きます。そこで「新しいフォルダー」を押して作ってください。</p>
+      <div class="inline-cmd" style="margin-top:10px"><code id="winPath"></code><button class="copy-btn" data-target="winPath">コピー</button></div>
+      <img class="shot" src="windows-folder.png" alt="Windowsのフォルダ選択画面。上の場所の欄に %USERPROFILE% と入力するところ">
+    </div>
+  </details>
+</section>
+
+<!-- 03 流れ -->
+<section id="install">
+  <div class="sec-head"><div class="step-num">03</div><h2>URLを貼ったあとの流れ</h2></div>
+  <div class="card">
+    <h3>自分でやるのは、この2つだけ</h3>
+    <div class="flow">
+      <div class="flow-item">
+        <div class="flow-dot">1</div>
+        <div class="flow-body"><b>「GitHub にも保管する？」に答える</b><span>最初に聞かれます。迷ったら「しない」でOK。あとから足せます</span></div>
+      </div>
+      <div class="flow-item"><div class="flow-line"></div></div>
+      <div class="flow-item">
+        <div class="flow-dot">2</div>
+        <div class="flow-body"><b>「許可」を押す</b><span>ネットへのアクセス・ファイルの作成・アプリのインストールの前に、Codex が確認してきます</span></div>
+      </div>
+      <div class="flow-item"><div class="flow-line"></div></div>
+      <div class="flow-item">
+        <div class="flow-dot">＋</div>
+        <div class="flow-body"><b>GitHub を使う人だけ：GitHub にログイン</b><span>画面に出る8文字のコードをブラウザに入れて「Authorize」を押します</span></div>
+      </div>
+      <div class="flow-item"><div class="flow-line"></div></div>
+      <div class="flow-item">
+        <div class="flow-dot">✓</div>
+        <div class="flow-body"><b>完成</b><span>Obsidian が作業フォルダを開いた状態で立ち上がります。次は「AI秘書をつくる」へ</span></div>
+      </div>
+    </div>
+    <div class="note ok"><span class="ico">✅</span><span>パスワードの入力や GitHub の登録は、Codex は代わりにやりません（あなたがブラウザでやります）。</span></div>
+  </div>
+
+  <details>
+    <summary>🔁 URLを貼っても始まらないとき</summary>
+    <div class="d-body">
+      <p>Codex がページを読めなかったときは、下のメッセージを「コピー」して、代わりに貼ってください。</p>
+      <div class="prompt-box" style="margin-top:12px">
+        <div class="prompt-head">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <span class="fname">導入メッセージ（予備）</span>
+          <button class="copy-btn" data-target="installPrompt">コピー</button>
+        </div>
+        <div class="prompt-scroll"><pre id="installPrompt"></pre></div>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>📄 Codex が読む手順書（中身を見たい人・うまく読めないとき）</summary>
+    <div class="d-body">
+      <p>Codex は <a href="setup.md">setup.md</a> を読んで案内します。中身はただの手順書（文章）です。</p>
+      <p>Codex が「手順書を読めない」と言ったら、下のボタンで保存してから「ダウンロードフォルダの codex-workspace-setup.md を読んで進めて」と送ってください。</p>
+      <a class="dl-link" href="setup.md" download="codex-workspace-setup.md">⬇ 手順書をダウンロード</a>
+    </div>
+  </details>
+</section>
+
+<!-- 04 困ったとき -->
+<section id="trouble">
+  <div class="sec-head"><div class="step-num">04</div><h2>困ったとき</h2></div>
+  <p style="color:var(--ink-soft);font-size:.92rem;margin-bottom:8px">基本は、エラーの文章やスクショをそのまま Codex に貼れば、原因を調べて直してくれます。</p>
+
+  <details>
+    <summary>Codex が「手順書を読めない」「ネットにアクセスできない」と言う</summary>
+    <div class="d-body">
+      <p>ネットへのアクセスが許可されていない可能性があります。許可を求める画面が出たらOKしてください。それでもダメなら、上の「手順書をダウンロード」で保存して、「ダウンロードフォルダの codex-workspace-setup.md を読んで進めて」と送ってください。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>ファイルを作るたびに「許可しますか？」と聞かれる</summary>
+    <div class="d-body">
+      <p>Codex が「毎回確認する」設定になっています。そのままでも使えます（そのつど許可すればOK）。面倒なときは「毎回の確認を減らしたい」と Codex に伝えると、設定の変え方を案内してくれます。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>あとから GitHub にも保管したくなった</summary>
+    <div class="d-body">
+      <p>作業フォルダを開いた Codex に「<b>GitHubにつないで</b>」と送ってください。このページの手順書のGitHubの部分だけを進めてくれます。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>GitHub のリポジトリが「Public（公開）」になっていた</summary>
+    <div class="d-body">
+      <p>Codex に「作業フォルダのリポジトリを非公開にして」と送れば直してくれます。セットアップの最後にも、Codex が自分で確認します。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Obsidian に何も表示されない</summary>
+    <div class="d-body">
+      <p>別のフォルダを保管庫として開いている可能性があります。Codex に「Obsidian連携はできていますか？」と聞くと確認して直してくれます。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>途中で止まってしまった</summary>
+    <div class="d-body">
+      <p>同じ作業フォルダを開いた Codex に、このページのURLをもう一度貼って「続きから」と送ってください。終わっているところは飛ばして、続きから案内してくれます。</p>
+    </div>
+  </details>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-in">
+    <span>🗂 Codex 作業フォルダのセットアップ</span>
+    <span>制作：RISE講師 関 諒也｜最終更新 2026-10-17</span>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
